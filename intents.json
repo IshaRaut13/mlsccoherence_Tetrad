@@ -1,0 +1,92 @@
+{"intents": [
+    {"tag": "greeting",
+    "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+    "responses": ["Hello", "Hi there, how can I help?"],
+    "context": [""]
+    },
+    {"tag": "goodbye",
+    "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+    "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+    "context": [""]
+    },
+    {"tag": "thanks",
+    "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+    "responses": ["My pleasure", "You're Welcome"],
+    "context": [""]
+    },
+    {"tag": "issue_report",
+    "patterns": ["I'm getting an error","Hi I am facing some technical issue related to CPU","I am facing issues with my laptop", "My laptop is not working properly", "I need help with my laptop", "My laptop is acting up" , "My laptop is freezing" ,"My Laptop is overheating"],
+    "responses": ["Before proceeding, can you confirm that you're calling regarding this problem for the first time?"],
+    "context": [""]
+    },
+    {"tag": "first_time_report",
+    "patterns": ["yes", "Yes, this is the first time I am reporting this issue", "I haven't reported this problem before"],
+    "responses": ["Got it! Can you please help me with your full name?"],
+    "context": [""]
+    },
+    {"tag": "not_first_time_report",
+    "patterns": ["No I have been having this problem since earlier", "I haven't reported this problem before" , "Yes, the problem is occurring much frequently lately", "Since last month, I'm facing this problem frquently"],
+    "responses": ["Thank you for letting us know. We'll do our best to assist you."],
+    "context": [""]
+    },
+    {"tag": "confirmation",
+    "patterns": ["Please send a technician asap","Yes, you can contact me", "Sure, feel free to call me"],
+    "responses": ["Great, we'll have someone reach out to you soon."],
+    "context": [""]
+    },
+    {"tag": "unavailable_time",
+    "patterns": ["The suggested time doesn't work for me", "I'm not available at that time", "No, I'm not free at that time"],
+    "responses": ["No problem, let's find a suitable time for you. When are you available?"],
+    "context": [""]
+    },
+    {"tag": "issue_confirmation",
+    "patterns": ["I tried multiple times","PC not starting","I restarted the device,still not working" , "Rebooted to no avail"],
+    "responses": ["Oh! In that case, Ill make sure to let the technician know about all the details."],
+    "context": [""]
+    },
+    {"tag": "name_confirmation",
+    "patterns": ["My name is ", "Yes, my name is"],
+    "responses": ["Greetings! please provide your contact number"],
+    "context": [""]
+    },
+    {
+    "tag": "contact_number_confirmation",
+    "patterns": ["[0-9]","My contact number is [0-9]+", "My phone number is [0-9]+", "Here is my number: [0-9]+"],
+    "responses": ["Noted. Just to confirm, is your number {0}?"]
+    },
+    {
+    "tag": "repeat_contact_number",
+    "patterns": ["Yes it is","Yes, that's correct", "Yes, my number is correct", "Confirm"],
+    "responses": ["Great, your contact number is {context_contact_number}."]
+    },
+    {"tag": "schedule_call",
+    "patterns": ["Please call me at [0-9]","Tomorrow","I'm available on Monday between 11 am to 10 pm", "Monday works for me", "Monday between 11 to 10 pm is fine"],
+    "responses": ["Thank you for confirming. We'll schedule a call for Monday between 11 am to 10 pm."],
+    "context": [""]
+    },
+    {"tag": "ticket_creation",
+    "patterns": [],
+    "responses": ["Alright, a ticket has been created with the details provided. Our team will reach out to you soon."],
+    "context": ["issue_report", "first_time_report", "confirmation", "unavailable_time", "schedule_call"]
+    },
+    {"tag": "laptop_brand",
+    "patterns": ["I have a Dell Laptop", "Hp laptop", "Asus"],
+    "responses": ["Knowing the brand helps us better understand your laptop's specifications."],
+    "context": [""]
+    },
+    {"tag": "laptop_model",
+    "patterns": ["Do you know the model number of your laptop?", "What is the model of your laptop?", "Can you provide the laptop's model?"],
+    "responses": ["The model number helps us identify specific features of your laptop. If you know it, please share."],
+    "context": [""]
+    },
+    {"tag": "contact_details",
+    "patterns": ["Can you please tell me your contact number?", "What is your phone number?", "How can we reach you?"],
+    "responses": ["We need your contact details to ensure smooth communication. Please provide your phone number."],
+    "context": [""]
+    },
+    {"tag": "technical_details",
+    "patterns": ["My PC is overheating a lot", "Blank Screen is showing up", "Slow CPU Speed"],
+    "responses": ["Understanding the technical issue helps us diagnose and resolve it efficiently. We'll try to address them as soon as possible"],
+    "context": [""]
+    }
+    ]}
